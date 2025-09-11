@@ -9,3 +9,14 @@ module.exports = {
   },
   plugins: [],
 }
+
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'nav-text': '#374151',
+      },
+    },
+  },
+  plugins: [],
+}
