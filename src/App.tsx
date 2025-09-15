@@ -3,12 +3,14 @@ import Header from "./components/Header";
 import logo from "./assets/logobg.png";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
 
 function App() {
   return (
-    <div className="font-sans text-gray-800">
+    <div className="pt-20 font-sans text-gray-800">
       <Header logoURL={logo} />
       <About />
+      <Gallery />
       <Footer />
     </div>
   );
