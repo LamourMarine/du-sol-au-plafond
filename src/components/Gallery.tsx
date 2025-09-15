@@ -31,7 +31,7 @@ const Gallery = () => {
       <section
         id="gallery"
         data-section="Gallery"
-        className="bg white py-32 min-h-[60vh]"
+        className="bg-yellow-800/30 py-32 min-h-[60vh]"
       >
         <div className="text-center mb-12">
           <h1 className="text-3xl font-bold mb-4">Galerie</h1>
