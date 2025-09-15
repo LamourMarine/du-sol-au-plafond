@@ -11,12 +11,12 @@ const Contact = () => {
 
     if (!form.current) return;
     emailjs
-      .sendForm(
-        "service_cpxn0oj",
-        "template_pr2uehw",
+        .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "OPvAJTKnR26-p15GM"
-      )
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+        )
       .then(
         () => {
           setPopUpMessage("Merci ! Votre message a été envoyé avec succès.");
