@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
-  const [popUpMessage, setPopUpMessage] = useState ("");
+  const [popUpMessage, setPopUpMessage] = useState("");
   const [showPopUp, setShowPopUp] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -11,12 +11,12 @@ const Contact = () => {
 
     if (!form.current) return;
     emailjs
-        .sendForm(
+      .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
         import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-        )
+      )
       .then(
         () => {
           setPopUpMessage("Merci ! Votre message a été envoyé avec succès.");
@@ -24,7 +24,9 @@ const Contact = () => {
           form.current?.reset();
         },
         (error) => {
-          setPopUpMessage("Une erreur est survenue. Veuillez réessayer plus tard.");
+          setPopUpMessage(
+            "Une erreur est survenue. Veuillez réessayer plus tard."
+          );
           setShowPopUp(true);
           console.error("EmailJS error:", error.text);
         }
@@ -32,10 +34,15 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gray-50 flex justify-center">
-      <div className="w-full max-w-lg bg-white rounded-lg shadow p-8">
-        <h3 className="text-2xl font-bold mb-6 text-center">Contactez-moi</h3>
-        <form ref={form} onSubmit={sendEmail} className="space-y-4">
+    <section
+      id="contact"
+className="py-16 bg-gradient-to-b from-amber-200 via-amber-300 to-amber-200 flex justify-center"
+>      <div className="w-full max-w-lg bg-white rounded-lg shadow p-8">
+        <h3 className="text-2xl font-bold mb-2 text-center">Contactez-moi</h3>
+        <p className="text-center text-gray-600 mb-6">
+          N’hésitez pas à m’envoyer un message pour toute question ou projet.
+        </p>{" "}
+        <form ref={form} onSubmit={sendEmail} className="space-y-6">
           <input
             type="text"
             name="user_name"
@@ -64,19 +71,19 @@ const Contact = () => {
           </button>
         </form>
         {/* Popup modal */}
-      {showPopUp && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
-          <div className="bg-white rounded-lg p-6 max-w-sm text-center shadow-lg relative">
-            <p className="mb-4">{popUpMessage}</p>
-            <button
-              className="absolute top-2 right-2 text-gray-600 text-sm hover:text-amber-700 bg-transparent border-0 p-0"
-              onClick={() => setShowPopUp(false)}
-            >
-              ✕
-            </button>
+        {showPopUp && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+            <div className="bg-white rounded-lg p-6 max-w-sm text-center shadow-lg relative">
+              <p className="mb-4">{popUpMessage}</p>
+              <button
+                className="absolute top-2 right-2 text-gray-600 text-sm hover:text-amber-700 bg-transparent border-0 p-0"
+                onClick={() => setShowPopUp(false)}
+              >
+                ✕
+              </button>
+            </div>
           </div>
-        </div>
-      )}
+        )}
       </div>
     </section>
   );

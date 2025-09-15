@@ -49,7 +49,7 @@ const GalleryCarousel: React.FC<GalleryCarouselProps> = ({
       </button>
 
       {/*Images*/}
-      <div className="flex justify-center gap-4 overflow-hidden">
+      <div className="flex justify-center gap-4 overflow-hidden m-12">
         {getVisibleImages().map((src, index) => (
           <div
             key={index}
