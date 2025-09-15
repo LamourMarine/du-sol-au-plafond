@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       colors: {
         'nav-text': '#374151',
+        'darkbg': '#1a1a1a',
       },
     },
   },
