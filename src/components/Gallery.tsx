@@ -3,27 +3,27 @@ import GalleryCarousel from "./GalleryCarousel";
 
 const Gallery = () => {
   const salleDeBainsImages = [
-    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_1.jpg",
-    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_2.jpg",
-    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_3.jpg",
-    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_4.jpg",
-    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_5.jpg"
+    "/images/Salle_de_bains/Salle_de_bains_1.jpg",
+    "/images/Salle_de_bains/Salle_de_bains_2.jpg",
+    "/images/Salle_de_bains/Salle_de_bains_3.jpg",
+    "/images/Salle_de_bains/Salle_de_bains_4.jpg",
+    "/images/Salle_de_bains/Salle_de_bains_5.jpg"
   ];
-
+  
   const carrelageImages = [
-    "src/assets/Images_travaux/Carrelage/Carrelage_1.jpg",
-    "src/assets/Images_travaux/Carrelage/Carrelage_2.jpg",
-    "src/assets/Images_travaux/Carrelage/Carrelage_3.jpg",
-    "src/assets/Images_travaux/Carrelage/Carrelage_4.jpg",
-    "src/assets/Images_travaux/Carrelage/Carrelage_5.jpg"
+    "/images/Carrelage/Carrelage_1.jpg",
+    "/images/Carrelage/Carrelage_2.jpg",
+    "/images/Carrelage/Carrelage_3.jpg",
+    "/images/Carrelage/Carrelage_4.jpg",
+    "/images/Carrelage/Carrelage_5.jpg"
   ];
-
+  
   const solImages = [
-    "src/assets/Images_travaux/Sols/Sol_1.jpg",
-    "src/assets/Images_travaux/Sols/Sol_2.jpg",
-    "src/assets/Images_travaux/Sols/Sol_3.jpg",
-    "src/assets/Images_travaux/Sols/Sol_4.jpg",
-    "src/assets/Images_travaux/Sols/Sol_5.jpg"
+    "/images/Sols/Sol_1.jpg",
+    "/images/Sols/Sol_2.jpg",
+    "/images/Sols/Sol_3.jpg",
+    "/images/Sols/Sol_4.jpg",
+    "/images/Sols/Sol_5.jpg"
   ];
 
   return (
