@@ -78,8 +78,8 @@ const Contact = () => {
 
     {/* Coordonnées directes */}
     <div className="mt-10 text-center text-gray-700">
-      <p>📞 06 12 34 56 78</p>
-      <p>✉️ contact@monsite.fr</p>
+      <p>📞 06 67 23 26 53</p>
+      <p>✉️ lamournico.fr</p>
     </div>
 
     {/* Popup modal */}

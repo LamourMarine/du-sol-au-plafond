@@ -19,6 +19,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section[id] {
+  scroll-margin-top: 80px !important;
+}
+
 /*
 body {
   background-color: #c3e5ff7a;

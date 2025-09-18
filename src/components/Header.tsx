@@ -35,7 +35,7 @@ const Header: React.FC<HeaderProps> = ({ logoURL }) => {
           <ul className="hidden md:flex space-x-12 text-gray-800 font-medium">
             <li>
               <a
-                href="#about"
+                href="/#about"
                 className="hover:text-amber-700 transition-colors duration-300"
               >
                 À propos
@@ -43,7 +43,7 @@ const Header: React.FC<HeaderProps> = ({ logoURL }) => {
             </li>
             <li>
               <a
-                href="#gallery"
+                href="/#gallery"
                 className="hover:text-amber-700 transition-colors duration-300"
               >
                 Galerie
@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ logoURL }) => {
             </li>
             <li>
               <a
-                href="#contact"
+                href="/#contact"
                 className="hover:text-amber-700 transition-colors duration-300"
               >
                 Contact
@@ -78,7 +78,7 @@ const Header: React.FC<HeaderProps> = ({ logoURL }) => {
           >
             <li>
               <a
-                href="#about"
+                href="/#about"
                 className="block hover:text-amber-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -87,7 +87,7 @@ const Header: React.FC<HeaderProps> = ({ logoURL }) => {
             </li>
             <li>
               <a
-                href="#gallery"
+                href="/#gallery"
                 className="block hover:text-amber-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
@@ -96,7 +96,7 @@ const Header: React.FC<HeaderProps> = ({ logoURL }) => {
             </li>
             <li>
               <a
-                href="#contact"
+                href="/#contact"
                 className="block hover:text-amber-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
