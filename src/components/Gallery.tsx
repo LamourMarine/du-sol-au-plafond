@@ -2,28 +2,28 @@ import React from "react";
 import GalleryCarousel from "./GalleryCarousel";
 
 const Gallery = () => {
-  const plomberieImages = [
-    "src/assets/Images_travaux/20231227_133023.jpg",
-    "src/assets/Images_travaux/20231227_215633.jpg",
-    "src/assets/Images_travaux/20231227_215643.jpg",
-    "src/assets/Images_travaux/20231229_082657.jpg",
-    "src/assets/Images_travaux/20231229_102539.jpg",
+  const salleDeBainsImages = [
+    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_1.jpg",
+    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_2.jpg",
+    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_3.jpg",
+    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_4.jpg",
+    "src/assets/Images_travaux/Salle_de_bains/Salle_de_bains_5.jpg"
   ];
 
   const carrelageImages = [
-    "/src/assets/image1.jpg",
-    "/src/assets/image2.jpg",
-    "/src/assets/image3.jpg",
-    "/src/assets/image4.jpg",
-    "/src/assets/image5.jpg",
+    "src/assets/Images_travaux/Carrelage/Carrelage_1.jpg",
+    "src/assets/Images_travaux/Carrelage/Carrelage_2.jpg",
+    "src/assets/Images_travaux/Carrelage/Carrelage_3.jpg",
+    "src/assets/Images_travaux/Carrelage/Carrelage_4.jpg",
+    "src/assets/Images_travaux/Carrelage/Carrelage_5.jpg"
   ];
 
   const solImages = [
-    "/src/assets/image1.jpg",
-    "/src/assets/image2.jpg",
-    "/src/assets/image3.jpg",
-    "/src/assets/image4.jpg",
-    "/src/assets/image5.jpg",
+    "src/assets/Images_travaux/Sols/Sol_1.jpg",
+    "src/assets/Images_travaux/Sols/Sol_2.jpg",
+    "src/assets/Images_travaux/Sols/Sol_3.jpg",
+    "src/assets/Images_travaux/Sols/Sol_4.jpg",
+    "src/assets/Images_travaux/Sols/Sol_5.jpg"
   ];
 
   return (
@@ -46,9 +46,9 @@ const Gallery = () => {
     {/* Plomberie */}
     <div className="bg-white rounded-xl shadow-md p-6 md:p-10">
       <h3 className="text-2xl font-semibold text-center text-gray-800 mb-6">
-        Plomberie
+        Salle de bains
       </h3>
-      <GalleryCarousel images={plomberieImages} />
+      <GalleryCarousel images={salleDeBainsImages} />
     </div>
 
     {/* Carrelage */}
