@@ -8,7 +8,7 @@ const About = () => {
   className="relative py-32 min-h-[60vh] bg-cover bg-center bg-no-repeat text-white flex items-center justify-center scroll-mt-20"
   style={{
     backgroundImage:
-      "url('/src/assets/todd-quackenbush-IClZBVw5W5A-unsplash.jpg')",
+      "url('/public/images/todd-quackenbush-IClZBVw5W5A-unsplash.jpg')",
   }}
 >
   {/* Overlay sombre */}
