@@ -28,31 +28,46 @@ const Gallery = () => {
 
   return (
     <>
-      <section
-        id="gallery"
-        data-section="Gallery"
-        className="bg white py-32 min-h-[60vh]"
-      >
-        <div className="text-center mb-12">
-          <h1 className="text-3xl font-bold mb-4">Galerie</h1>
-          <p className="text-gray-700 text-lg">
-            Découvrez quelques-unes de mes réalisations.
-          </p>
-        </div>
+<section
+  id="gallery"
+  className="bg-gradient-to-b from-white via-amber-50/40 to-white py-32"
+>
+  <div className="text-center mb-16">
+    <h1 className="text-3xl md:text-4xl font-bold text-gray-800 relative inline-block">
+      Galerie
+      <span className="absolute left-0 -bottom-2 w-full h-1 bg-amber-700 rounded"></span>
+    </h1>
+    <p className="text-gray-600 text-lg mt-6">
+      Découvrez quelques-unes de mes réalisations.
+    </p>
+  </div>
 
-        {/*Plomberie*/}
-        <h3 className="text-2xl font-bold mb-4 mt-4 text-center">Plomberie</h3>
-        <GalleryCarousel images={plomberieImages} />
+  <div className="max-w-6xl mx-auto space-y-16">
+    {/* Plomberie */}
+    <div className="bg-white rounded-xl shadow-md p-6 md:p-10">
+      <h3 className="text-2xl font-semibold text-center text-gray-800 mb-6">
+        Plomberie
+      </h3>
+      <GalleryCarousel images={plomberieImages} />
+    </div>
 
-        {/*Carrelage*/}
-        <h3 className="text-2xl font-bold mb-4 mt-4 text-center">Carrelage</h3>
-        <GalleryCarousel images={carrelageImages} />
+    {/* Carrelage */}
+    <div className="bg-white rounded-xl shadow-md p-6 md:p-10">
+      <h3 className="text-2xl font-semibold text-center text-gray-800 mb-6">
+        Carrelage
+      </h3>
+      <GalleryCarousel images={carrelageImages} />
+    </div>
 
-        {/*Sols / parquet / terasse*/}
-        <h3 className="text-2xl font-bold mb-4 mt-4 text-center">Sols</h3>
-        <GalleryCarousel images={solImages} />
-      </section>
-    </>
+    {/* Sols */}
+    <div className="bg-white rounded-xl shadow-md p-6 md:p-10">
+      <h3 className="text-2xl font-semibold text-center text-gray-800 mb-6">
+        Sols
+      </h3>
+      <GalleryCarousel images={solImages} />
+    </div>
+  </div>
+</section>    </>
   );
 };
 

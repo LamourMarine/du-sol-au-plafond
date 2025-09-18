@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 interface HeaderProps {
   logoURL: string;
@@ -6,21 +6,29 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ logoURL }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 500);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header>
-
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
         <div className="container mx-auto px-4 py-2 flex flex-col md:flex-row items-center md:justify-between">
-          {/* Logo à gauche */}
+          {/* Logo */}
           <img
             src={logoURL}
             alt="Logo de l'entreprise"
             className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-lg mb-4 md:mb-0 -ml-2"
           />{" "}
-          {/* Phrase centrée horizontalement */}
-          <p className="text-lg md:text-2xl text-nav-text italic mb-2 md:mb-0 md:mr-auto text-center md:text-left">
+          {/* Phrase centrée */}
+          <p className="text-lg md:text-2xl text-nav-text italic mb-2 md:mb-0 md:ml-6 md:mr-auto text-center md:text-left">       
             Du sol au plafond, un travail d’artisan.
           </p>
           {/* Menu desktop */}
@@ -63,11 +71,15 @@ const Header: React.FC<HeaderProps> = ({ logoURL }) => {
 
         {/* Menu mobile déroulant */}
         {isOpen && (
-          <ul className="md:hidden absolute top-full left-0 w-full bg-white/20 backdrop-blur-lg border border-white/30 shadow-xl px-6 py-4 space-y-3 text-amber-200 font-medium z-50">
+          <ul
+            className={`md:hidden absolute top-full left-0 w-full bg-amber-900/50 backdrop-blur-lg border border-white/30 shadow-xl px-6 py-4 space-y-3 font-medium z-50 ${
+              scrolled ? "text-amber-100" : "text-amber-200"
+            }`}
+          >
             <li>
               <a
                 href="#about"
-                className="block hover:text-sky-600 transition-colors"
+                className="block hover:text-amber-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 À propos
@@ -76,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({ logoURL }) => {
             <li>
               <a
                 href="#gallery"
-                className="block hover:text-sky-600 transition-colors"
+                className="block hover:text-amber-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Galerie
@@ -85,7 +97,7 @@ const Header: React.FC<HeaderProps> = ({ logoURL }) => {
             <li>
               <a
                 href="#contact"
-                className="block hover:text-sky-600 transition-colors"
+                className="block hover:text-amber-700 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Contact
