@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
-import logo from "./assets/logobg.png";
+import logo from "./assets/logobg2.png";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
